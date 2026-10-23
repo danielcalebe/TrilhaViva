@@ -1,0 +1,29 @@
+{
+  "overall": 75,
+  "trails": [
+    {
+      "id": "TV-001",
+      "name_en": "Green Spring Trail",
+      "name_pt": "Trilha da Fonte Verde",
+      "progress": 100
+    },
+    {
+      "id": "TV-002",
+      "name_en": "Waterfall Path",
+      "name_pt": "Caminho da Cachoeira",
+      "progress": 100
+    },
+    {
+      "id": "TV-003",
+      "name_en": "Serra Viewpoint",
+      "name_pt": "Mirante da Serra",
+      "progress": 60
+    },
+    {
+      "id": "TV-004",
+      "name_en": "Cerrado Walk",
+      "name_pt": "Caminhada no Cerrado",
+      "progress": 40
+    }
+  ]
+}

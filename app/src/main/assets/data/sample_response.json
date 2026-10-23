@@ -1,0 +1,151 @@
+{
+  "request": {
+    "id": "req_2027_000128",
+    "timestamp": 1767225600,
+    "success": true,
+    "cached": false,
+    "message": "Campos exibidos com acentuação: São Miguel da Serra",
+    "details": {
+      "source": "local_cache",
+      "attempts": 3,
+      "elapsed_ms": 142.5,
+      "retry": null,
+      "headers": {
+        "content_type": "application/json",
+        "language": "pt-BR",
+        "compression": {
+          "enabled": true,
+          "algorithm": "gzip",
+          "level": 6,
+          "ratio": 0.42,
+          "fallback": {
+            "used": false,
+            "reason": null
+          }
+        }
+      }
+    }
+  },
+  "trails": [
+    {
+      "id": "TV-001",
+      "name": "Green Spring Trail",
+      "difficulty": "easy",
+      "length_km": 4.5,
+      "open": true,
+      "elevation_m": 320,
+      "description": "This trail crosses the Atlantic forest reserve from the visitor centre to the suspended bridge, offering viewpoints over the valley, a waterfall and a resting area with benches along the way for all visitors.",
+      "waypoints": [
+        {
+          "name": "Trailhead",
+          "lat": -22.9068,
+          "lng": -43.1729
+        },
+        {
+          "name": "Suspended bridge",
+          "lat": -22.9101,
+          "lng": -43.1695
+        },
+        {
+          "name": "Mirador",
+          "lat": -22.9134,
+          "lng": -43.1652
+        }
+      ],
+      "facilities": {
+        "water": true,
+        "parking": true,
+        "restrooms": false
+      }
+    },
+    {
+      "id": "TV-002",
+      "name": "Waterfall Path",
+      "difficulty": "moderate",
+      "length_km": 6.2,
+      "open": false,
+      "elevation_m": 540,
+      "description": "Access to the waterfall is allowed only during the dry season, and the last section of the path requires care on the wet stones.",
+      "waypoints": [
+        {
+          "name": "Gate",
+          "lat": -22.8977,
+          "lng": -43.1601
+        },
+        {
+          "name": "Falls",
+          "lat": -22.8945,
+          "lng": -43.1548
+        }
+      ],
+      "facilities": {
+        "water": true,
+        "parking": false,
+        "restrooms": null
+      }
+    },
+    {
+      "id": "TV-003",
+      "name": "Serra Viewpoint",
+      "difficulty": "hard",
+      "length_km": 8.4,
+      "open": true,
+      "elevation_m": 1180,
+      "description": "Steep ascent to the highest point of the reserve, recommended for experienced hikers with suitable equipment and an early start.",
+      "waypoints": [
+        {
+          "name": "Base camp",
+          "lat": -22.8801,
+          "lng": -43.1487
+        },
+        {
+          "name": "Summit",
+          "lat": -22.8744,
+          "lng": -43.1402
+        }
+      ],
+      "facilities": {
+        "water": false,
+        "parking": true,
+        "restrooms": false
+      }
+    }
+  ],
+  "tags": [
+    "forest",
+    "waterfall",
+    "family",
+    "viewpoint",
+    "birdwatching",
+    "offline",
+    "sunrise"
+  ],
+  "settings": {
+    "theme": "light",
+    "language": "pt-BR",
+    "high_contrast": false,
+    "font_scale": 1.0,
+    "notifications": {
+      "enabled": true,
+      "channels": [],
+      "rules": {
+        "quiet_hours": {
+          "start": "22:00",
+          "end": "06:00",
+          "override": {}
+        },
+        "max_per_day": 3
+      }
+    }
+  },
+  "stats": {
+    "total_trails": 5,
+    "completed": 2,
+    "completion_rate": 75.0,
+    "average_length_km": 5.58,
+    "last_update": null,
+    "sync_enabled": true,
+    "export_pending": false,
+    "cached_files": 12
+  }
+}

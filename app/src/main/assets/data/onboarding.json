@@ -1,0 +1,26 @@
+[
+  {
+    "id": "slide_01",
+    "image": "onboarding_1.png",
+    "title_en": "Discover trails",
+    "title_pt": "Descubra trilhas",
+    "description_en": "Find ecological trails and follow your progress on the map.",
+    "description_pt": "Encontre trilhas ecológicas e acompanhe seu progresso no mapa."
+  },
+  {
+    "id": "slide_02",
+    "image": "onboarding_2.png",
+    "title_en": "Scan any code",
+    "title_pt": "Escaneie qualquer código",
+    "description_en": "Point the camera at a QR Code or barcode to get information.",
+    "description_pt": "Aponte a câmera para um QR Code ou código de barras e receba informações."
+  },
+  {
+    "id": "slide_03",
+    "image": "onboarding_3.png",
+    "title_en": "Record your tour",
+    "title_pt": "Grave seu passeio",
+    "description_en": "Listen to audio guides, take photos and record your own voice.",
+    "description_pt": "Ouça guias de áudio, tire fotos e grave sua própria voz."
+  }
+]

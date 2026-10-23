@@ -1,0 +1,121 @@
+key,en,pt-BR
+worldskills_brasil_2027_reference_only,WorldSkills Brasil 2027 – REFERENCE ONLY,WorldSkills Brasil 2027 – REFERENCE ONLY
+home,Home,Início
+scan,Scan,Escanear
+media,Media,Mídia
+data,Data,Dados
+settings,Settings,Configurações
+en,en,en
+pt_br,pt-BR,pt-BR
+txt_1_trail_completed,1 trail completed,1 trilha concluída
+txt_2_trails_completed,2 trails completed,2 trilhas concluídas
+txt_1_trilha_conclu_da,1 trilha concluída,1 trilha concluída
+txt_2_trilhas_conclu_das,2 trilhas concluídas,2 trilhas concluídas
+trilhaviva,TrilhaViva,TrilhaViva
+skip,Skip,Pular
+next,Next,Próximo
+get_started,Get Started,Começar
+enter_your_pin,Enter your PIN,Digite seu PIN
+use_the_4_digit_pin_to_unlock,Use the 4-digit PIN to unlock,Use o PIN de 4 dígitos para desbloquear
+incorrect_pin_try_again,"Incorrect PIN, try again","PIN incorreto, tente novamente"
+your_trail_companion,Your trail companion,Seu companheiro de trilha
+overall_progress,Overall Progress,Progresso Geral
+trail_progress,Trail Progress,Progresso das Trilhas
+offline_pack,Offline Pack,Pacote Offline
+txt_3_6_12_0_mb,3.6 / 12.0 MB,3.6 / 12.0 MB
+start_download,Start Download,Iniciar Download
+cancel,Cancel,Cancelar
+download_again,Download Again,Baixar Novamente
+overall,overall,overall
+completed,completed,concluída
+txt_0_0_12_0_mb,0.0 / 12.0 MB,0.0 / 12.0 MB
+download_complete,Download complete,Download concluído
+scan_code,Scan Code,Escanear Código
+align_the_code_within_the_frame,Align the code within the frame,Alinhe o código dentro da moldura
+pick_from_gallery,Pick from Gallery,Selecionar da Galeria
+scan_result,Scan Result,Resultado do Escaneamento
+format,Format,Formato
+content,Content,Conteúdo
+type,Type,Tipo
+open_link,Open Link,Abrir Link
+scan_again,Scan Again,Escanear Novamente
+grant_permission,Grant Permission,Conceder Permissão
+camera_permission_is_required_to_scan_codes,Camera permission is required to scan codes.,A permissão de câmera é necessária para escanear códigos.
+no_code_found_in_the_image,No code found in the image,Nenhum código encontrado na imagem
+qr_code,QR Code,QR Code
+ean_13,EAN-13,EAN-13
+code_128,Code 128,Code 128
+trail,Trail,Trilha
+trail_not_found,Trail not found,Trilha não encontrada
+http,http://,http://
+https,https://,https://
+link,Link,Link
+barcode,Barcode,Código de Barras
+text,Text,Texto
+photos,Photos,Fotos
+audio,Audio,Áudio
+video,Video,Vídeo
+take_photo,Take Photo,Tirar Foto
+choose_from_gallery,Choose from Gallery,Escolher da Galeria
+files_3_size_1_2_mb,Files: 3 · Size: 1.2 MB,Arquivos: 3 · Tamanho: 1.2 MB
+temporary_photos,Temporary Photos,Fotos Temporárias
+no_temporary_photos,No temporary photos,Nenhuma foto temporária
+clear_cache,Clear Cache,Limpar Cache
+camera_permission_is_required_to_take_photos,Camera permission is required to take photos.,A permissão de câmera é necessária para tirar fotos.
+clear_all_temporary_files,Clear all temporary files?,Limpar todos os arquivos temporários?
+no,No,Não
+yes,Yes,Sim
+files_0_size_0_kb,Files: 0 · Size: 0 KB,Arquivos: 0 · Tamanho: 0 KB
+audio_guide,Audio Guide,Guia de Áudio
+voice_recorder,Voice Recorder,Gravador de Voz
+my_recordings,My Recordings,Minhas Gravações
+no_recordings_yet,No recordings yet,Nenhuma gravação ainda
+txt_00_12_00_45,00:12 / 00:45,00:12 / 00:45
+microphone_permission_is_required_to_record_audio,Microphone permission is required to record audio.,A permissão de microfone é necessária para gravar áudio.
+ready,Ready,Pronto
+recording,Recording...,Gravando...
+txt_00_00,00:00,00:00
+recording_n,Recording N,Gravação N
+txt_00_07_00_30,00:07 / 00:30,00:07 / 00:30
+data_viewer,Data Viewer,Visualizador de Dados
+tree,Tree,Árvore
+raw,Raw,Bruto
+expand_all,Expand All,Expandir Tudo
+collapse_all,Collapse All,Recolher Tudo
+txt_5,{ 5 },{ 5 }
+txt_3,[ 3 ],[ 3 ]
+null,null,null
+appearance,Appearance,Aparência
+dark_mode,Dark Mode,Modo Escuro
+accessibility,Accessibility,Acessibilidade
+font_size,Font Size,Tamanho da Fonte
+small,Small,Pequeno
+normal,Normal,Normal
+large,Large,Grande
+extra_large,Extra Large,Extra Grande
+high_contrast,High Contrast,Alto Contraste
+the_quick_brown_fox_jumps_over_the_lazy_dog,The quick brown fox jumps over the lazy dog,O rápido marrom rapaz salta sobre o cão preguiçoso
+storage,Storage,Armazenamento
+temporary_files_1_2_mb,Temporary files: 1.2 MB,Arquivos temporários: 1.2 MB
+language,Language,Idioma
+the_language_follows_the_device_settings,The language follows the device settings,O idioma segue as configurações do dispositivo
+english,English,Inglês
+portugu_s_brasil,Português (Brasil),Português (Brasil)
+selected,selected,selecionado
+on_off,on/off,ligado/desligado
+temporary_files_0_kb,Temporary files: 0 KB,Arquivos temporários: 0 KB
+xx,XX,XX
+completed_trails_one,1 trail completed,1 trilha concluída
+completed_trails_other,%d trails completed,%d trilhas concluídas
+cd_backspace,Backspace,Apagar
+cd_play,Play,Reproduzir
+cd_pause,Pause,Pausar
+cd_close,Close,Fechar
+cd_close_camera,Close camera,Fechar câmera
+cd_mute,Mute,Silenciar
+cd_unmute,Unmute,Ativar som
+cd_take_photo,Take photo,Tirar foto
+cd_replay_progress,Replay progress animation,Repetir animação de progresso
+cd_expand_node,Expand node,Expandir nó
+cd_collapse_node,Collapse node,Recolher nó
+cd_back,Back,Voltar

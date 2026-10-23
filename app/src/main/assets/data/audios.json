@@ -1,0 +1,23 @@
+[
+  {
+    "id": "aud_01",
+    "title_en": "Forest Arrival",
+    "title_pt": "Chegada à Mata",
+    "file": "guide_01.mp3",
+    "duration_sec": 30
+  },
+  {
+    "id": "aud_02",
+    "title_en": "Waterfall and Rocks",
+    "title_pt": "Cachoeira e Rochas",
+    "file": "guide_02.mp3",
+    "duration_sec": 45
+  },
+  {
+    "id": "aud_03",
+    "title_en": "Sunset on the Ridge",
+    "title_pt": "Pôr do Sol no Cume",
+    "file": "guide_03.mp3",
+    "duration_sec": 20
+  }
+]

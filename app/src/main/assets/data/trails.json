@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TV-001",
+    "name_en": "Green Spring Trail",
+    "name_pt": "Trilha da Fonte Verde",
+    "difficulty": "easy",
+    "length_km": 4.5,
+    "image": "trail_01.jpg"
+  },
+  {
+    "id": "TV-002",
+    "name_en": "Waterfall Path",
+    "name_pt": "Caminho da Cachoeira",
+    "difficulty": "moderate",
+    "length_km": 6.2,
+    "image": "trail_02.jpg"
+  },
+  {
+    "id": "TV-003",
+    "name_en": "Serra Viewpoint",
+    "name_pt": "Mirante da Serra",
+    "difficulty": "hard",
+    "length_km": 8.4,
+    "image": "trail_03.jpg"
+  },
+  {
+    "id": "TV-004",
+    "name_en": "Cerrado Walk",
+    "name_pt": "Caminhada no Cerrado",
+    "difficulty": "easy",
+    "length_km": 3.1,
+    "image": "trail_04.jpg"
+  },
+  {
+    "id": "TV-005",
+    "name_en": "Desert Beach Trail",
+    "name_pt": "Trilha da Praia Deserta",
+    "difficulty": "moderate",
+    "length_km": 5.7,
+    "image": "trail_05.jpg"
+  }
+]

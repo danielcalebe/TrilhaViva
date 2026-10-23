@@ -1,0 +1,18 @@
+[
+  {
+    "id": "vid_01",
+    "title_en": "Trail Promo",
+    "title_pt": "Trilha em Destaque",
+    "file": "trail_promo.mp4",
+    "thumbnail": "thumb_promo.jpg",
+    "duration_sec": 30
+  },
+  {
+    "id": "vid_02",
+    "title_en": "Trail Timelapse",
+    "title_pt": "Timelapse da Trilha",
+    "file": "trail_timelapse.mp4",
+    "thumbnail": "thumb_timelapse.jpg",
+    "duration_sec": 20
+  }
+]
