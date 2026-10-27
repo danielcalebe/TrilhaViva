@@ -135,5 +135,9 @@
     <string name="on_boarding_1_description">Encontre trilhas ecológicas e acompanhe seu progresso no mapa.</string>
     <string name="on_boarding_2_description">Aponte a câmera para um QR Code ou código de barras e receba informações.</string>
     <string name="on_boarding_3_description">Ouça guias de áudio, tire fotos e grave sua própria voz.</string>
+    <string name="files">Arquivos</string>
+    <string name="size">Tamanho</string>
 
+    <string name="record">Gravar</string>
+    <string name="stop">Parar</string>
 </resources>

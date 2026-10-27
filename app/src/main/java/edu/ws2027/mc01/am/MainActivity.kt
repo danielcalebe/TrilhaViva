@@ -8,6 +8,7 @@ import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -24,35 +25,84 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.core.content.edit
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import edu.ws2027.mc01.am.audio.AppAudioPlayer
+import edu.ws2027.mc01.am.audio.AppAudioRecorder
+import edu.ws2027.mc01.am.data.FontSize
 import edu.ws2027.mc01.am.data.Repository
+import edu.ws2027.mc01.am.ui.screens.Data
 import edu.ws2027.mc01.am.ui.screens.Home
+import edu.ws2027.mc01.am.ui.screens.Media
 import edu.ws2027.mc01.am.ui.screens.OnBoarding
 import edu.ws2027.mc01.am.ui.screens.Pin
 import edu.ws2027.mc01.am.ui.screens.Scan
+import edu.ws2027.mc01.am.ui.screens.Settings
 import edu.ws2027.mc01.am.ui.screens.Splash
 import edu.ws2027.mc01.am.ui.theme.TrilhaVivaTheme
 
 class MainActivity : ComponentActivity() {
+
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     enableEdgeToEdge()
+
+    val appAudioPlayer: AppAudioPlayer = AppAudioPlayer(applicationContext)
+    val appAudioRecorder: AppAudioRecorder = AppAudioRecorder(applicationContext)
 
     setContent {
 
       val repository = remember { Repository(applicationContext) }
 
+
       val nav = rememberNavController()
       val currentRoute = nav.currentBackStackEntryAsState().value?.destination?.route
-      TrilhaVivaTheme {
+      val sp = getSharedPreferences("p", 0)
+
+      val a = isSystemInDarkTheme()
+      fun isDarkMode(): Boolean = sp.getBoolean("dark_mode", a)
+      fun setDarkMode(new: Boolean) {
+        sp.edit { putBoolean("dark_mode", new) }
+      }
+
+      fun getFontSize(): Int = sp.getInt("font_size", 2)
+      fun setFontSize(new: Int) {
+        sp.edit { putInt("font_size", new) }
+      }
+
+      fun isHighContrast(): Boolean = sp.getBoolean("high_contrast", false)
+      fun setHighContrast(new: Boolean) {
+        sp.edit { putBoolean("high_contrast", new) }
+      }
+
+      var isDarkMode by remember { mutableStateOf(isDarkMode()) }
+      var isHighContrast by remember { mutableStateOf(isHighContrast()) }
+      var currentFontSize by remember { mutableStateOf(getFontSize()) }
+
+      TrilhaVivaTheme(
+        darkTheme = isDarkMode,
+        highContrast = isHighContrast,
+        fontSize = when (currentFontSize) {
+          1 -> FontSize.SMALL
+          3 -> FontSize.BIG
+          4 -> FontSize.EXTRA
+          else -> FontSize.NORMAL
+        }
+      ) {
+
+
         Scaffold(
           modifier = Modifier.fillMaxSize(), bottomBar = {
             if (currentRoute in listOf("home", "scan", "media", "data", "settings")) {
@@ -235,8 +285,42 @@ class MainActivity : ComponentActivity() {
               composable("home") {
                 Home(progressData = repository.getProgressData())
               }
-              composable("scan") { Scan() }
+              composable("scan") {
+                Scan(
+                  repository = repository
+                )
+              }
+              composable("media") {
+                Media(
+                  repository = repository,
+                  appAudioPlayer = appAudioPlayer,
+                  appAudioRecorder = appAudioRecorder
+                )
+              }
+              composable("data") {
+                Data(repository = repository)
+              }
 
+              composable("settings") {
+                Settings(
+                  isDarkMode = isDarkMode,
+                  onChangeDarkMode = { setDarkMode(it); isDarkMode = isDarkMode() },
+                  currentFontSize = currentFontSize,
+                  onChangeFontSize = { fontSize ->
+                    val c = when (fontSize) {
+                      FontSize.SMALL -> 1
+                      FontSize.BIG -> 3
+                      FontSize.EXTRA -> 4
+                      else -> 2
+                    }
+                    setFontSize(c)
+                    currentFontSize = getFontSize()
+                  },
+                  isHighContrast = isHighContrast,
+                  onChangeHighContrast = { setHighContrast(it); isHighContrast = isHighContrast() },
+
+                )
+              }
             }
 
           }

@@ -1,6 +1,7 @@
 package edu.ws2027.mc01.am.ui.theme
 
 import android.app.Activity
+import android.graphics.fonts.Font
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -11,6 +12,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import edu.ws2027.mc01.am.data.FontSize
 
 private val DarkColorScheme = darkColorScheme(
   primary = Color(0xFF5bcb91),
@@ -87,26 +89,33 @@ private val LightHighContrastColorScheme = lightColorScheme(
 @Composable
 fun TrilhaVivaTheme(
   darkTheme: Boolean = isSystemInDarkTheme(),
+  highContrast: Boolean = false,
   // Dynamic color is available on Android 12+
+  fontSize: FontSize = FontSize.NORMAL,
   dynamicColor: Boolean = false,
   content: @Composable () -> Unit
 ) {
-  val colorScheme = when {
-    dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-      val context = LocalContext.current
-      if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-    }
 
-    darkTheme -> DarkColorScheme
+  val colorScheme = when {
+    darkTheme && !highContrast-> DarkColorScheme
+    darkTheme && highContrast-> DarkHighContrastColorScheme
+    !darkTheme && highContrast -> LightHighContrastColorScheme
     else -> LightColorScheme
   }
 
 
 
 
+  val typography = when(fontSize){
+    FontSize.SMALL -> TypographySmall
+    FontSize.NORMAL -> TypographyNormal
+    FontSize.BIG -> TypographyBig
+    FontSize.EXTRA -> TypographyExtraBig
+  }
+
   MaterialTheme(
     colorScheme = colorScheme,
-    typography = Typography,
+    typography = typography,
     content = content
   )
 }

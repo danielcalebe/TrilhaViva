@@ -63,10 +63,17 @@ dependencies {
   implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
 
   implementation("io.coil-kt.coil3:coil-svg:3.0.4")
+  implementation("io.coil-kt.coil3:coil-compose:3.0.4")
 
   implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1")
   implementation("com.google.mlkit:barcode-scanning:17.3.0")
   implementation(libs.androidx.camera.view)
   implementation("androidx.camera:camera-camera2:1.6.2")
   implementation(libs.androidx.camera.lifecycle)
+
+
+
+  implementation("androidx.media3:media3-exoplayer-dash:1.11.1")
+  implementation("androidx.media3:media3-exoplayer:1.11.1")
+  implementation("androidx.media3:media3-ui-compose-material3:1.11.1")
 }

@@ -133,6 +133,10 @@
     <string name="on_boarding_1_description">Find ecological trails and follow your progress on the map.</string>
     <string name="on_boarding_2_description">Point the camera at a QR Code or barcode to get information.</string>
     <string name="on_boarding_3_description">Listen to audio guides, take photos and record your own voice.</string>
+    <string name="files">Files</string>
+    <string name="size">Size</string>
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
 
 
 </resources>

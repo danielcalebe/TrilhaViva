@@ -6,7 +6,7 @@ import android.net.Uri
 import android.os.Build
 
 class AppAudioPlayer(private val context: Context) {
-  val mediaPlayer: MediaPlayer =
+  var mediaPlayer: MediaPlayer? =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
       MediaPlayer(context)
     } else {
@@ -14,13 +14,32 @@ class AppAudioPlayer(private val context: Context) {
     }
 
   fun start(uri: Uri) {
-    mediaPlayer.setDataSource(context, uri)
-    mediaPlayer.prepare()
-    mediaPlayer.start()
+    mediaPlayer =  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+      MediaPlayer(context)
+    } else {
+      MediaPlayer()
+    }.apply {
+      setDataSource(context, uri )
+      prepare()
+      start()
+    }
   }
 
   fun stop() {
-    mediaPlayer.stop()
-    mediaPlayer.release()
+    mediaPlayer?.stop()
+    mediaPlayer?.release()
+    mediaPlayer = null
+  }
+
+  fun seekTo(millis: Long) {
+    mediaPlayer?.seekTo(millis.toInt())
+  }
+
+  fun pause() {
+    mediaPlayer?.pause()
+  }
+
+  fun resume() {
+    mediaPlayer?.start()
   }
 }

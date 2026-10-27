@@ -19,5 +19,33 @@ class Repository(
     )
   }
 
+  fun getTrails(): List<Trail2> {
+    return Json.decodeFromString(
+      context.assets.open("data/trails.json").bufferedReader().readText()
+    )
+  }
+
+  fun getAudioGuides(): List<AudioGuide> {
+    return Json.decodeFromString(
+      context.assets.open("data/audios.json").bufferedReader().readText()
+    )
+  }
+
+  fun getVideos(): List<Video> {
+    return Json.decodeFromString(
+      context.assets.open("data/videos.json").bufferedReader().readText()
+    )
+  }
+
+  fun getSampleResponse(): SampleResponse {
+    return Json.decodeFromString(
+      context.assets.open("data/sample_response.json").bufferedReader().readText()
+    )
+  }
+
+  fun getSampleResponseString(): String {
+    return context.assets.open("data/sample_response.json").bufferedReader().readText()
+  }
+
 
 }

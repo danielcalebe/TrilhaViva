@@ -1,45 +1,45 @@
 package edu.ws2027.mc01.am.audio
 
 import android.content.Context
-import android.media.MediaPlayer
-import android.net.Uri
+import android.media.MediaRecorder
 import android.os.Build
+import java.io.File
 
-class AppAudioPlayer(private val context: Context) {
-  var mediaPlayer: MediaPlayer? =
+class AppAudioRecorder(private val context: Context) {
+  var mediaRecorder: MediaRecorder? =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-      MediaPlayer(context)
+      MediaRecorder(context)
     } else {
-      MediaPlayer()
+      MediaRecorder()
     }
 
-  fun start(uri: Uri) {
-    mediaPlayer =  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-      MediaPlayer(context)
+  fun start(file: File) {
+    mediaRecorder = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+      MediaRecorder(context)
     } else {
-      MediaPlayer()
+      MediaRecorder()
     }.apply {
-      setDataSource(context, uri )
+      setAudioSource(MediaRecorder.AudioSource.MIC)
+      setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
+      setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
+      setOutputFile(file.path)
       prepare()
       start()
     }
   }
 
   fun stop() {
-    mediaPlayer?.stop()
-    mediaPlayer?.release()
-    mediaPlayer = null
+    mediaRecorder?.stop()
+    mediaRecorder?.release()
+    mediaRecorder = null
   }
 
-  fun seekTo(millis: Long) {
-    mediaPlayer?.seekTo(millis.toInt())
-  }
 
   fun pause() {
-    mediaPlayer?.pause()
+    mediaRecorder?.pause()
   }
 
   fun resume() {
-    mediaPlayer?.start()
+    mediaRecorder?.start()
   }
 }
